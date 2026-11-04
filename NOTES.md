@@ -1,7 +1,10 @@
 # ZaibaTech-Website notes
 
-- Site: one-page `index.html` + `assets/logo.svg`; `CNAME` = www.zaibatech.com. Host: GitHub Pages, repo mirahimi500-ai/ZaibaTech-Website (branch main).
-- 2026-11-03: Hybrid tech design with light/dark toggle; brand "Zaiba Technologies"; drawn illustrations (no images).
+- Site: `index.html`, `privacy/`, `terms/`, `404.html`, shared `assets/site.css`, `assets/logo.svg`, self-hosted fonts in `assets/fonts/`; `CNAME` = www.zaibatech.com. Host: GitHub Pages, repo mirahimi500-ai/ZaibaTech-Website (branch main).
+- 2026-11-03: Hybrid tech design with light/dark toggle; brand "Zaiba Technologies"; drawn illustrations.
 - 2026-11-03: Contact pop-up form via Web3Forms (key for support@zaibatech.com only). FormSubmit was unreachable. Email addresses removed from the page; only the "SiraatOne apps" contact card kept.
-- Tests: 0 page errors, no overflow 360-1280px, text contrast >= 7:1 in both themes; real Web3Forms test delivered to support@zaibatech.com.
-- Next: push -> GitHub Pages + custom domain -> GoDaddy A @ (185.199.108-111.153) + CNAME www -> mirahimi500-ai.github.io (never delete MX/TXT) -> Enforce HTTPS. Optional: Web3Forms domain restriction after go-live.
+- 2026-11-03: Privacy Policy and Terms of Use (effective Nov 3, 2026); footer Privacy / Terms / App privacy policies (siraatone.com/privacy, kept as the single app-policy copy). Google Fonts removed; fonts self-hosted (Inter, Sora, JetBrains Mono - SIL OFL).
+- 2026-11-03: Added 404 page, share image (assets/og-image.png 1200x630), favicon.ico, apple-touch-icon, logo-512.png, robots.txt, sitemap.xml, Organization/WebSite JSON-LD, skip-to-content link.
+- Tests: 0 page errors, no overflow 360-1280px, text contrast >= 5.8:1 in both themes; real Web3Forms test delivered to support@zaibatech.com.
+- To confirm: governing-law state in Terms (Pennsylvania). Policies not lawyer-reviewed.
+- Next: GoDaddy A @ (185.199.108-111.153) + CNAME www -> mirahimi500-ai.github.io (never delete MX/TXT) -> Enforce HTTPS -> GitHub verified domain (TXT) -> DMARC (TXT) -> Google Search Console.
