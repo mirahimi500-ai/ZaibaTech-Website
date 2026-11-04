@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-page="home">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@
 <meta property="og:image:alt" content="Zaiba Technologies - apps and software">
 <meta property="og:site_name" content="Zaiba Technologies">
 <meta name="twitter:card" content="summary_large_image">
-<script>(function(){var r=document.documentElement,t;try{t=localStorage.getItem("zt-theme")}catch(e){}if(t!=="light"&&t!=="dark"){t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}r.setAttribute("data-theme",t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==="dark"?"#070b18":"#f6f8fd";r.className+=" js"})();</script>
+<script>(function(){var r=document.documentElement,t;try{t=localStorage.getItem("zt-theme")}catch(e){}if(t!=="light"&&t!=="dark"){t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}r.setAttribute("data-theme",t);var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=t==="dark"?"#070b18":"#f6f8fd";r.className+=" js";try{var lg=localStorage.getItem("zt-lang");if(lg&&/^[a-z]{2}$/.test(lg)){r.lang=lg;if(/^(ar|ur|fa|ps)$/.test(lg))r.dir="rtl"}}catch(e){}})();</script>
 <link rel="stylesheet" href="assets/site.css">
 <style>
 /* hero */
@@ -272,15 +272,16 @@ html:has(dialog[open]){overflow:hidden}
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://www.zaibatech.com/#org", "name": "Zaiba Technologies", "alternateName": "ZaibaTech", "url": "https://www.zaibatech.com/", "logo": "https://www.zaibatech.com/assets/logo-512.png", "description": "Zaiba Technologies builds and supports apps for Android, Android TV and the web, including the SiraatOne Quran and SiraatOne Azan apps.", "contactPoint": {"@type": "ContactPoint", "contactType": "customer support", "url": "https://www.zaibatech.com/#contact", "availableLanguage": "English"}}, {"@type": "WebSite", "@id": "https://www.zaibatech.com/#website", "name": "Zaiba Technologies", "alternateName": "ZaibaTech", "url": "https://www.zaibatech.com/", "publisher": {"@id": "https://www.zaibatech.com/#org"}}]}</script>
 </head>
 <body>
-<a class="skip" href="#top">Skip to content</a>
+<a class="skip" href="#top" data-i18n="skip">Skip to content</a>
 <header class="top">
   <div class="wrap bar">
     <a class="brand" href="#top" aria-label="Zaiba Technologies home"><img src="assets/logo.svg" alt=""><span>Zaiba <span class="grad">Technologies</span></span></a>
     <nav class="menu" aria-label="Main">
-      <a class="sm" href="#what">What we do</a>
-      <a class="sm" href="#apps">Our apps</a>
-      <a href="#contact">Contact</a>
-      <button class="toggle" id="theme" type="button" aria-label="Switch light or dark theme" title="Light / dark theme">
+      <a class="sm" href="#what" data-i18n="nav_what">What we do</a>
+      <a class="sm" href="#apps" data-i18n="nav_apps">Our apps</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+      <div class="lang"><button class="lang-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu" aria-label="Language" title="Language" data-i18n-attr="aria-label:lang_label;title:lang_label"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg><span id="langCode">EN</span></button><ul class="lang-menu" id="langMenu" role="menu" hidden></ul></div>
+      <button class="toggle" id="theme" type="button" aria-label="Switch light or dark theme" title="Switch light or dark theme" data-i18n-attr="aria-label:theme_label;title:theme_label">
         <svg class="ic moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
         <svg class="ic sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
       </button>
@@ -310,17 +311,17 @@ html:has(dialog[open]){overflow:hidden}
 
     <div class="wrap hero-grid">
       <div>
-        <p class="pill rv"><i></i>Apps &amp; Software · Android · TV · Web</p>
-        <h1 class="rv" style="--d:.08s">We build apps people use every day, <span class="grad">and we stay to support them.</span></h1>
-        <p class="lead rv" style="--d:.16s">Zaiba Technologies is an independent software company. We design, develop and maintain apps for Android phones, tablets, Android TV and the web, starting with the SiraatOne family of Islamic apps.</p>
+        <p class="pill rv"><i></i><span data-i18n="pill">Apps &amp; Software · Android · TV · Web</span></p>
+        <h1 class="rv" style="--d:.08s" data-i18n-html="h1">We build apps people use every day, <span class="grad">and we stay to support them.</span></h1>
+        <p class="lead rv" style="--d:.16s" data-i18n="lead">Zaiba Technologies is an independent software company. We design, develop and maintain apps for Android phones, tablets, Android TV and the web, starting with the SiraatOne family of Islamic apps.</p>
         <div class="cta rv" style="--d:.24s">
-          <a class="btn btn-main" href="#apps">See our apps <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a class="btn btn-ghost open-form" href="#contact" data-topic="">Get support</a>
+          <a class="btn btn-main" href="#apps"><span data-i18n="cta_apps">See our apps</span> <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost open-form" href="#contact" data-topic="" data-i18n="cta_support">Get support</a>
         </div>
         <div class="stats rv" style="--d:.32s">
-          <div><b>2</b><span>Apps live on Google Play</span></div>
-          <div><b>3</b><span>Platforms: Android, TV, web</span></div>
-          <div><b>iOS</b><span>Coming soon</span></div>
+          <div><b>2</b><span data-i18n="stat1">Apps live on Google Play</span></div>
+          <div><b>3</b><span data-i18n="stat2">Platforms: Android, TV, web</span></div>
+          <div><b>iOS</b><span data-i18n="stat3">Coming soon</span></div>
         </div>
       </div>
 
@@ -375,8 +376,8 @@ html:has(dialog[open]){overflow:hidden}
     </div>
   </section>
 
-  <section class="stack" aria-label="Technologies we use">
-    <p>Built with modern tools</p>
+  <section class="stack" aria-label="Technologies we use" data-i18n-attr="aria-label:stack_aria">
+    <p data-i18n="stack_title">Built with modern tools</p>
     <div class="marquee">
       <div class="track">
         <span class="tech"><i></i>Flutter</span><span class="tech"><i></i>Dart</span><span class="tech"><i></i>Kotlin</span><span class="tech"><i></i>Android</span><span class="tech"><i></i>Android TV</span><span class="tech"><i></i>HTML5</span><span class="tech"><i></i>CSS3</span><span class="tech"><i></i>JavaScript</span><span class="tech"><i></i>GitHub</span><span class="tech"><i></i>Google Play</span>
@@ -388,34 +389,34 @@ html:has(dialog[open]){overflow:hidden}
   <section id="what" class="block">
     <div class="wrap">
       <div class="head rv">
-        <p class="kicker">What we do</p>
-        <h2>Software and apps, <span class="grad">built and supported</span> end to end.</h2>
-        <p>We design, develop and maintain our apps for phones, tablets, TV and the web.</p>
+        <p class="kicker" data-i18n="what_kicker">What we do</p>
+        <h2 data-i18n-html="what_h2">Software and apps, <span class="grad">built and supported</span> end to end.</h2>
+        <p data-i18n="what_p">We design, develop and maintain our apps for phones, tablets, TV and the web.</p>
       </div>
       <div class="cards four">
         <article class="svc rv">
           <span class="n">01</span>
           <div class="ico"><svg class="ic" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18h2"/></svg></div>
-          <h3>App development</h3>
-          <p>Android apps for phone and tablet, built with Flutter and Kotlin.</p>
+          <h3 data-i18n="s1_h">App development</h3>
+          <p data-i18n="s1_p">Android apps for phone and tablet, built with Flutter and Kotlin.</p>
         </article>
         <article class="svc rv" style="--d:.08s">
           <span class="n">02</span>
           <div class="ico"><svg class="ic" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="12" rx="2"/><path d="M8 20.5h8M12 16.5v4"/></svg></div>
-          <h3>TV &amp; large screens</h3>
-          <p>Android TV and tablet apps designed for big screens and the remote.</p>
+          <h3 data-i18n="s2_h">TV &amp; large screens</h3>
+          <p data-i18n="s2_p">Android TV and tablet apps designed for big screens and the remote.</p>
         </article>
         <article class="svc rv" style="--d:.16s">
           <span class="n">03</span>
           <div class="ico"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg></div>
-          <h3>Web</h3>
-          <p>Fast, mobile-first websites that bring our apps to any browser.</p>
+          <h3 data-i18n="s3_h">Web</h3>
+          <p data-i18n="s3_p">Fast, mobile-first websites that bring our apps to any browser.</p>
         </article>
         <article class="svc rv" style="--d:.24s">
           <span class="n">04</span>
           <div class="ico"><svg class="ic" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></div>
-          <h3>Support &amp; updates</h3>
-          <p>Regular updates, fixes and real answers by email from the people who build the apps.</p>
+          <h3 data-i18n="s4_h">Support &amp; updates</h3>
+          <p data-i18n="s4_p">Regular updates, fixes and real answers by email from the people who build the apps.</p>
         </article>
       </div>
     </div>
@@ -424,9 +425,9 @@ html:has(dialog[open]){overflow:hidden}
   <section id="apps" class="block apps">
     <div class="wrap">
       <div class="head rv">
-        <p class="kicker">Our apps</p>
-        <h2>The <span class="grad">SiraatOne</span> family</h2>
-        <p>Islamic apps for everyday use, on the screens you already have.</p>
+        <p class="kicker" data-i18n="apps_kicker">Our apps</p>
+        <h2 data-i18n-html="apps_h2">The <span class="grad">SiraatOne</span> family</h2>
+        <p data-i18n="apps_p">Islamic apps for everyday use, on the screens you already have.</p>
       </div>
       <div class="cards">
         <article class="app rv">
@@ -434,10 +435,10 @@ html:has(dialog[open]){overflow:hidden}
             <div class="m-phone"><div class="scr"><div class="hd"></div><div class="ln"><i></i><span></span><em></em></div><div class="ln"><i></i><span></span><em></em></div><div class="ln"><i></i><span></span><em></em></div><div class="ln"><i></i><span></span><em></em></div></div></div>
           </div>
           <div class="app-body">
-            <span class="tag">Android phone &amp; tablet</span>
+            <span class="tag" data-i18n="a1_tag">Android phone &amp; tablet</span>
             <h3>SiraatOne Quran</h3>
-            <p>Read the Quran with translations, recitations, bookmarks and notes.</p>
-            <a class="more" href="https://play.google.com/store/apps/details?id=com.siraatone.quran" target="_blank" rel="noopener">Get it on Google Play <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <p data-i18n="a1_p">Read the Quran with translations, recitations, bookmarks and notes.</p>
+            <a class="more" href="https://play.google.com/store/apps/details?id=com.siraatone.quran" target="_blank" rel="noopener"><span data-i18n="play">Get it on Google Play</span> <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
         <article class="app rv" style="--d:.08s">
@@ -445,10 +446,10 @@ html:has(dialog[open]){overflow:hidden}
             <div class="m-tv"><div class="fr"><div class="scr"><span class="lb">NEXT · ASR</span><span class="ck">13:38</span><div class="tl"><i></i><i></i><i class="on"></i><i></i><i></i></div></div></div><div class="sd"></div></div>
           </div>
           <div class="app-body">
-            <span class="tag">Android TV &amp; tablet</span>
+            <span class="tag" data-i18n="a2_tag">Android TV &amp; tablet</span>
             <h3>SiraatOne Azan</h3>
-            <p>Prayer times and the Azan, designed for tablet and TV screens.</p>
-            <a class="more" href="https://play.google.com/store/apps/details?id=com.siraatone.azan" target="_blank" rel="noopener">Get it on Google Play <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <p data-i18n="a2_p">Prayer times and the Azan, designed for tablet and TV screens.</p>
+            <a class="more" href="https://play.google.com/store/apps/details?id=com.siraatone.azan" target="_blank" rel="noopener"><span data-i18n="play">Get it on Google Play</span> <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
         <article class="app rv">
@@ -456,10 +457,10 @@ html:has(dialog[open]){overflow:hidden}
             <div class="m-web"><div class="bb"><i></i><i></i><i></i><span>www.siraatone.com</span></div><div class="hb"></div><div class="rw"><i></i><i></i><i></i></div></div>
           </div>
           <div class="app-body">
-            <span class="tag">Any browser</span>
-            <h3>SiraatOne web</h3>
-            <p>Read the Quran online, right in your browser.</p>
-            <a class="more" href="https://www.siraatone.com/" target="_blank" rel="noopener">Visit www.siraatone.com <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <span class="tag" data-i18n="a3_tag">Any browser</span>
+            <h3 data-i18n="a3_h">SiraatOne web</h3>
+            <p data-i18n="a3_p">Read the Quran online, right in your browser.</p>
+            <a class="more" href="https://www.siraatone.com/" target="_blank" rel="noopener"><span data-i18n="a3_link">Visit www.siraatone.com</span> <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
         <article class="app rv" style="--d:.08s">
@@ -467,9 +468,9 @@ html:has(dialog[open]){overflow:hidden}
             <div class="m-ios"><div class="scr"><b>iOS</b><small>COMING SOON</small></div></div>
           </div>
           <div class="app-body">
-            <span class="tag soon">Coming soon</span>
-            <h3>SiraatOne for iOS</h3>
-            <p>SiraatOne Quran is coming to iPhone.</p>
+            <span class="tag soon" data-i18n="a4_tag">Coming soon</span>
+            <h3 data-i18n="a4_h">SiraatOne for iOS</h3>
+            <p data-i18n="a4_p">SiraatOne Quran is coming to iPhone.</p>
           </div>
         </article>
       </div>
@@ -482,17 +483,17 @@ html:has(dialog[open]){overflow:hidden}
         <div class="glow g1"></div><div class="glow g2"></div>
         <div class="gridbg"></div>
         <div class="head">
-          <p class="kicker">Support &amp; contact</p>
-          <h2>Questions or need help? <span class="grad">We reply by email.</span></h2>
-          <p>Choose a topic, send us a message and we will reply to you by email.</p>
+          <p class="kicker" data-i18n="c_kicker">Support &amp; contact</p>
+          <h2 data-i18n-html="c_h2">Questions or need help? <span class="grad">We reply by email.</span></h2>
+          <p data-i18n="c_p">Choose a topic, send us a message and we will reply to you by email.</p>
         </div>
         <div class="mails one">
           <div class="mailcard">
             <div class="ico"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></div>
-            <h3>SiraatOne apps</h3>
-            <p>Help with SiraatOne Quran, SiraatOne Azan or the SiraatOne website.</p>
-            <button class="btn btn-main open-form" type="button" data-topic="">Get app support <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-            <p class="small"><a href="https://www.siraatone.com/privacy/" target="_blank" rel="noopener">SiraatOne privacy policy</a></p>
+            <h3 data-i18n="c_card_h">SiraatOne apps</h3>
+            <p data-i18n="c_card_p">Help with SiraatOne Quran, SiraatOne Azan or the SiraatOne website.</p>
+            <button class="btn btn-main open-form" type="button" data-topic=""><span data-i18n="c_card_btn">Get app support</span> <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <p class="small"><a href="https://www.siraatone.com/privacy/" target="_blank" rel="noopener" data-i18n="c_card_priv">SiraatOne privacy policy</a></p>
           </div>
         </div>
       </div>
@@ -502,43 +503,43 @@ html:has(dialog[open]){overflow:hidden}
 
 <dialog class="mf" id="contactForm" aria-labelledby="cf-title">
   <div class="mf-head">
-    <h2 id="cf-title">Send us a message</h2>
-    <p>Fill in the form and we will reply to you by email.</p>
-    <button class="mf-x" type="button" data-close aria-label="Close"><svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <h2 id="cf-title" data-i18n="f_title">Send us a message</h2>
+    <p data-i18n="f_sub">Fill in the form and we will reply to you by email.</p>
+    <button class="mf-x" type="button" data-close aria-label="Close" data-i18n-attr="aria-label:close"><svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   </div>
   <form id="cf" class="mf-body" novalidate>
     <div class="status" id="cf-status" role="alert"></div>
     <div class="row two">
-      <div class="fld"><label for="cf-first">First name <i>*</i></label><input id="cf-first" name="first_name" autocomplete="given-name" required maxlength="60"><span class="err">Please enter your first name.</span></div>
-      <div class="fld"><label for="cf-last">Last name <i>*</i></label><input id="cf-last" name="last_name" autocomplete="family-name" required maxlength="60"><span class="err">Please enter your last name.</span></div>
+      <div class="fld"><label for="cf-first"><span data-i18n="first">First name</span> <i>*</i></label><input id="cf-first" name="first_name" autocomplete="given-name" required maxlength="60"><span class="err" data-i18n="e_first">Please enter your first name.</span></div>
+      <div class="fld"><label for="cf-last"><span data-i18n="last">Last name</span> <i>*</i></label><input id="cf-last" name="last_name" autocomplete="family-name" required maxlength="60"><span class="err" data-i18n="e_last">Please enter your last name.</span></div>
     </div>
     <div class="row two">
-      <div class="fld"><label for="cf-email">Email <i>*</i></label><input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@example.com"><span class="err">Please enter a valid email address.</span></div>
-      <div class="fld"><label for="cf-phone">Mobile <small>(optional)</small></label><input id="cf-phone" name="phone" type="tel" autocomplete="tel" maxlength="25" pattern="[0-9+\(\)\-\.\s]{7,25}" placeholder="+1 555 123 4567"><span class="err">Please enter a valid phone number.</span></div>
+      <div class="fld"><label for="cf-email"><span data-i18n="email">Email</span> <i>*</i></label><input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@example.com"><span class="err" data-i18n="e_email">Please enter a valid email address.</span></div>
+      <div class="fld"><label for="cf-phone"><span data-i18n="phone">Mobile</span> <small data-i18n="optional">(optional)</small></label><input id="cf-phone" name="phone" type="tel" autocomplete="tel" maxlength="25" pattern="[0-9+\(\)\-\.\s]{7,25}" placeholder="+1 555 123 4567"><span class="err" data-i18n="e_phone">Please enter a valid phone number.</span></div>
     </div>
     <div class="row">
-      <div class="fld"><label for="cf-address">Address <small>(optional)</small></label><input id="cf-address" name="address" autocomplete="street-address" maxlength="200" placeholder="Street, city, state, country"></div>
+      <div class="fld"><label for="cf-address"><span data-i18n="address">Address</span> <small data-i18n="optional">(optional)</small></label><input id="cf-address" name="address" autocomplete="street-address" maxlength="200" placeholder="Street, city, state, country" data-i18n-attr="placeholder:ph_address"></div>
     </div>
     <div class="row two">
-      <div class="fld"><label for="cf-topic">Topic <i>*</i></label><select id="cf-topic" name="topic" required><option value="" disabled selected>Choose a topic</option><option>Zaiba Technologies (general)</option><option>SiraatOne Quran app</option><option>SiraatOne Azan app</option><option>SiraatOne website</option><option>Business &amp; partnerships</option><option>Other</option></select><span class="err">Please choose a topic.</span></div>
-      <div class="fld"><label for="cf-subject">Subject <i>*</i></label><input id="cf-subject" name="subject" required maxlength="120"><span class="err">Please enter a subject.</span></div>
+      <div class="fld"><label for="cf-topic"><span data-i18n="topic">Topic</span> <i>*</i></label><select id="cf-topic" name="topic" required><option value="" disabled selected data-i18n="topic_choose">Choose a topic</option><option value="Zaiba Technologies (general)" data-i18n="t1">Zaiba Technologies (general)</option><option value="SiraatOne Quran app" data-i18n="t2">SiraatOne Quran app</option><option value="SiraatOne Azan app" data-i18n="t3">SiraatOne Azan app</option><option value="SiraatOne website" data-i18n="t4">SiraatOne website</option><option value="Business &amp; partnerships" data-i18n="t5">Business &amp; partnerships</option><option value="Other" data-i18n="t6">Other</option></select><span class="err" data-i18n="e_topic">Please choose a topic.</span></div>
+      <div class="fld"><label for="cf-subject"><span data-i18n="subject">Subject</span> <i>*</i></label><input id="cf-subject" name="subject" required maxlength="120"><span class="err" data-i18n="e_subject">Please enter a subject.</span></div>
     </div>
     <div class="row">
-      <div class="fld"><label for="cf-msg">Message <i>*</i><span class="count" id="cf-count">0 / 3000</span></label><textarea id="cf-msg" name="message" required minlength="10" maxlength="3000" placeholder="How can we help you?"></textarea><span class="err">Please write your message (at least 10 characters).</span></div>
+      <div class="fld"><label for="cf-msg"><span data-i18n="message">Message</span> <i>*</i><span class="count" id="cf-count">0 / 3000</span></label><textarea id="cf-msg" name="message" required minlength="10" maxlength="3000" placeholder="How can we help you?" data-i18n-attr="placeholder:ph_msg"></textarea><span class="err" data-i18n="e_msg">Please write your message (at least 10 characters).</span></div>
     </div>
-    <div class="fld agree-f"><label class="agree"><input type="checkbox" name="agree" required><span>I agree that Zaiba Technologies may use these details to reply to my message, as described in the <a href="privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</span></label><span class="err">Please tick this box so we can reply to you.</span></div>
+    <div class="fld agree-f"><label class="agree"><input type="checkbox" name="agree" required><span data-i18n-html="agree">I agree that Zaiba Technologies may use these details to reply to my message, as described in the <a href="privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</span></label><span class="err" data-i18n="e_agree">Please tick this box so we can reply to you.</span></div>
     <div class="hp" aria-hidden="true"><label>Leave this empty<input name="_honey" tabindex="-1" autocomplete="off"></label></div>
     <div class="mf-actions">
-      <span class="mf-note"><svg class="ic" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Your details are only used to reply to you.</span>
-      <button class="btn btn-plain" type="button" data-close>Cancel</button>
-      <button class="btn btn-main" id="cf-send" type="submit"><span class="spin"></span><span class="lbl">Send message</span></button>
+      <span class="mf-note"><svg class="ic" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span data-i18n="note">Your details are only used to reply to you.</span></span>
+      <button class="btn btn-plain" type="button" data-close data-i18n="cancel">Cancel</button>
+      <button class="btn btn-main" id="cf-send" type="submit"><span class="spin"></span><span class="lbl" data-i18n="send">Send message</span></button>
     </div>
   </form>
   <div class="done" role="status">
     <div class="ok"><svg class="ic" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></div>
-    <h3>Message sent</h3>
+    <h3 data-i18n="done_h">Message sent</h3>
     <p>Thank you, <b id="cf-name"></b>. We received your message and will reply to <b id="cf-mail"></b> soon.</p>
-    <button class="btn btn-main" type="button" data-close>Close</button>
+    <button class="btn btn-main" type="button" data-close data-i18n="close">Close</button>
   </div>
 </dialog>
 
@@ -546,12 +547,13 @@ html:has(dialog[open]){overflow:hidden}
   <div class="wrap foot">
     <a class="brand" href="#top"><img src="assets/logo.svg" alt=""><span>Zaiba <span class="grad">Technologies</span></span></a>
     <nav class="fnav" aria-label="Footer">
-      <a href="#what">What we do</a><a href="#apps">Our apps</a><a href="#contact">Contact</a><a href="privacy/">Privacy</a><a href="terms/">Terms</a><a href="https://www.siraatone.com/privacy/" target="_blank" rel="noopener">App privacy policies</a>
+      <a href="#what" data-i18n="nav_what">What we do</a><a href="#apps" data-i18n="nav_apps">Our apps</a><a href="#contact" data-i18n="nav_contact">Contact</a><a href="privacy/" data-i18n="f_privacy">Privacy</a><a href="terms/" data-i18n="f_terms">Terms</a><a href="https://www.siraatone.com/privacy/" target="_blank" rel="noopener" data-i18n="f_apppriv">App privacy policies</a>
     </nav>
     <span>© <span id="y">2026</span> Zaiba Technologies · zaibatech.com</span>
   </div>
 </footer>
 
+<script src="assets/i18n.js"></script>
 <script>
 (function(){
   var root=document.documentElement,hdr=document.querySelector(".top");
@@ -574,10 +576,11 @@ html:has(dialog[open]){overflow:hidden}
     /* Web3Forms access key (delivers to support@zaibatech.com) */
     var KEYS=["3842ace9-398b-421c-bfcf-9f52f6c8b26d"];
     var ENDPOINT="https://api.web3forms.com/submit";
+    var T=function(k,f){return window.ZT?ZT.t(k):f};
     var count=function(){cnt.textContent=msg.value.length+" / 3000"};
     var check=function(el){var ok=el.checkValidity(),f=el.closest(".fld");if(f)f.classList.toggle("bad",!ok);return ok};
     var showErr=function(t){st.textContent=t;st.classList.add("show")};
-    var busy=function(on){send.classList.toggle("busy",on);send.querySelector(".lbl").textContent=on?"Sending…":"Send message"};
+    var busy=function(on){send.classList.toggle("busy",on);send.querySelector(".lbl").textContent=on?T("sending","Sending…"):T("send","Send message")};
     var fields=Array.prototype.filter.call(form.elements,function(el){return el.name&&el.name!=="_honey"});
     document.querySelectorAll(".open-form").forEach(function(b){b.addEventListener("click",function(e){
       e.preventDefault();dlg.classList.remove("sent");st.classList.remove("show");
@@ -598,7 +601,7 @@ html:has(dialog[open]){overflow:hidden}
       var v=function(n){return (form.elements[n].value||"").trim()};
       if(v("_honey")){dlg.classList.add("sent");return}
       var data={subject:"New message from zaibatech.com · "+v("topic")+" · "+v("subject"),from_name:"Zaiba Technologies website",replyto:v("email"),
-        name:v("first_name")+" "+v("last_name"),email:v("email"),phone:v("phone")||"-",address:v("address")||"-",topic:v("topic"),message_subject:v("subject"),message:v("message")};
+        name:v("first_name")+" "+v("last_name"),email:v("email"),phone:v("phone")||"-",address:v("address")||"-",topic:v("topic"),message_subject:v("subject"),message:v("message"),language:(window.ZT?ZT.name():"English")};
       busy(true);
       var ctrl=window.AbortController?new AbortController():null,timer=setTimeout(function(){if(ctrl)ctrl.abort()},20000);
       Promise.all(KEYS.map(function(k){
@@ -609,11 +612,11 @@ html:has(dialog[open]){overflow:hidden}
         var ok=rs.filter(function(j){return j&&(j.success===true||j.success==="true")});
         if(ok.length<rs.length&&window.console)console.warn("Web3Forms:",rs);
         if(ok.length){
-          document.getElementById("cf-name").textContent=v("first_name");document.getElementById("cf-mail").textContent=v("email");
+          var esc=function(x){return String(x).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};dlg.querySelector(".done p").innerHTML=esc(T("done_text","Thank you, {name}. We received your message and will reply to {email} soon.")).replace("{name}","<b>"+esc(v("first_name"))+"</b>").replace("{email}","<b>"+esc(v("email"))+"</b>");
           form.reset();count();fields.forEach(function(el){var f=el.closest(".fld");if(f)f.classList.remove("bad")});
           dlg.classList.add("sent");dlg.querySelector(".done .btn").focus();
-        }else if(rs.every(function(j){return j&&j.net})){showErr("Could not connect. Please check your internet connection and try again.")}
-        else{showErr("Sorry, your message could not be sent. Please try again in a moment."+(rs[0]&&rs[0].message?" ("+rs[0].message+")":""))}
+        }else if(rs.every(function(j){return j&&j.net})){showErr(T("err_net","Could not connect. Please check your internet connection and try again."))}
+        else{showErr(T("err_send","Sorry, your message could not be sent. Please try again in a moment.")+(rs[0]&&rs[0].message?" ("+rs[0].message+")":""))}
       });
     });
   }
