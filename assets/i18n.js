@@ -21,16 +21,25 @@ function apply(lang){cur=L[lang]?lang:"en";h.lang=cur;h.dir=RTL[cur]?"rtl":"ltr"
   document.querySelectorAll("#langMenu [data-lang]").forEach(function(b){b.setAttribute("aria-checked",b.getAttribute("data-lang")===cur?"true":"false")});
   legal(cur)}
 function menu(){var btn=document.getElementById("langBtn"),m=document.getElementById("langMenu");if(!btn||!m)return;
-  m.innerHTML=ORDER.map(function(c){return '<li role="none"><button type="button" role="menuitemradio" data-lang="'+c+'" lang="'+c+'" dir="'+(RTL[c]?"rtl":"ltr")+'">'+NAMES[c]+'</button></li>'}).join("");
-  function close(){m.hidden=true;btn.setAttribute("aria-expanded","false")}
-  btn.addEventListener("click",function(e){e.stopPropagation();var open=m.hidden;m.hidden=!open;btn.setAttribute("aria-expanded",open?"true":"false");
-    if(open){var a=m.querySelector('[aria-checked="true"]')||m.querySelector("button");if(a)a.focus()}});
-  m.addEventListener("click",function(e){var b=e.target.closest("[data-lang]");if(!b)return;var l=b.getAttribute("data-lang");
-    try{localStorage.setItem("zt-lang",l)}catch(x){}apply(l);close();btn.focus()});
-  m.addEventListener("keydown",function(e){if(e.key!=="ArrowDown"&&e.key!=="ArrowUp")return;e.preventDefault();
-    var it=[].slice.call(m.querySelectorAll("button")),i=it.indexOf(document.activeElement);it[(i+(e.key==="ArrowDown"?1:-1)+it.length)%it.length].focus()});
-  document.addEventListener("click",function(e){if(!m.hidden&&!e.target.closest(".lang"))close()});
-  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!m.hidden){close();btn.focus()}})}
+  var EN={en:"English",ar:"Arabic",ur:"Urdu",id:"Indonesian",tr:"Turkish",fa:"Persian (Dari / Farsi)",ps:"Pashto",bn:"Bengali",fr:"French",ms:"Malay"};
+  var CK='<svg class="ic lm-ck" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>';
+  m.innerHTML='<p class="lm-head"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg><span data-i18n="lang_label">Language</span></p><ul class="lm-list" role="menu">'+
+    ORDER.map(function(c){return '<li role="none"><button type="button" class="lm-item" role="menuitemradio" aria-checked="false" data-lang="'+c+'"><span class="lm-code" aria-hidden="true">'+c.toUpperCase()+'</span><span class="lm-name"><bdi lang="'+c+'">'+NAMES[c]+'</bdi><small>'+EN[c]+'</small></span>'+CK+'</button></li>'}).join("")+'</ul>';
+  var sc=document.createElement("div");sc.className="lm-scrim";sc.hidden=true;document.body.appendChild(sc);document.body.appendChild(m);
+  var mq=window.matchMedia("(max-width:560px)");
+  function place(){m.style.top=m.style.left=m.style.right="";if(mq.matches)return;var r=btn.getBoundingClientRect();m.style.top=Math.round(r.bottom+10)+"px";
+    if(h.dir==="rtl"){m.style.left=Math.max(16,Math.round(r.left))+"px";m.style.right="auto"}else{m.style.right=Math.max(16,Math.round(innerWidth-r.right))+"px";m.style.left="auto"}}
+  function close(){if(m.hidden)return;m.hidden=true;sc.hidden=true;btn.setAttribute("aria-expanded","false")}
+  function open(){place();m.hidden=false;sc.hidden=false;btn.setAttribute("aria-expanded","true");var a=m.querySelector('[aria-checked="true"]')||m.querySelector(".lm-item");if(a)a.focus({preventScroll:true})}
+  btn.addEventListener("click",function(e){e.stopPropagation();if(m.hidden)open();else close()});
+  sc.addEventListener("click",close);
+  m.addEventListener("click",function(e){var b=e.target.closest("[data-lang]");if(!b)return;var l=b.getAttribute("data-lang");try{localStorage.setItem("zt-lang",l)}catch(x){}apply(l);close();btn.focus()});
+  m.addEventListener("keydown",function(e){var k=e.key;if(["ArrowDown","ArrowUp","Home","End"].indexOf(k)<0)return;e.preventDefault();
+    var it=[].slice.call(m.querySelectorAll(".lm-item")),i=it.indexOf(document.activeElement);
+    i=k==="Home"?0:k==="End"?it.length-1:(i+(k==="ArrowDown"?1:-1)+it.length)%it.length;it[i].focus()});
+  document.addEventListener("click",function(e){if(!m.hidden&&!m.contains(e.target)&&!btn.contains(e.target))close()});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!m.hidden){close();btn.focus()}});
+  window.addEventListener("resize",close)}
 window.ZT={t:t,lang:function(){return cur},name:function(){return NAMES[cur]}};
 menu();apply(pick());
 })();
