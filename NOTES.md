@@ -10,4 +10,6 @@
 - Tests: 0 page errors, no overflow 360-1280px in all 10 languages, text contrast >= 5.8:1 in both themes; real Web3Forms test delivered to support@zaibatech.com.
 - To confirm: governing-law state in Terms (Pennsylvania). Policies not lawyer-reviewed.
 - 2026-11-06: LIVE. GoDaddy DNS: 4x A @ 185.199.108-111.153, CNAME www -> mirahimi500-ai.github.io (MX/TXT untouched). GitHub Pages: main /(root), custom domain www.zaibatech.com, DNS check OK, http+https 200, Enforce HTTPS on.
-- Next (optional): live contact-form test, GitHub verified domain (TXT), DMARC (TXT), Google Search Console + sitemap, privacy@ email on Privacy Policy (A/B/C pending).
+- 2026-11-06: Live form test PASS (support@). GitHub verified domain PASS (keep TXT _github-pages-challenge-mirahimi500-ai). DMARC already present (GoDaddy default, p=quarantine) - do not add a second. DKIM/SPF/Zoho verification intact. Google Search Console (Domain property) verified; sitemap submitted (file 200 OK, Google fetch pending).
+- 2026-11-06: privacy@zaibatech.com added to Privacy Policy sections 7 and 12 (all 10 languages); other pages stay email-free.
+- Later (optional): native-speaker review (ps, fa, ur, bn); lawyer review of policies after PA LLC; refresh og-image to mention Windows.
