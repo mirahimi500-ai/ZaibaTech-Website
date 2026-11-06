@@ -9,4 +9,5 @@
 - 2026-11-06: Added SiraatOne Azan for Windows (Microsoft Store) card + Windows in hero/services/form topics (10 languages); iOS card now full-width. Store link: https://apps.microsoft.com/detail/9PHZ87D2BW12 (verified: SiraatOne Azan).
 - Tests: 0 page errors, no overflow 360-1280px in all 10 languages, text contrast >= 5.8:1 in both themes; real Web3Forms test delivered to support@zaibatech.com.
 - To confirm: governing-law state in Terms (Pennsylvania). Policies not lawyer-reviewed.
-- Next: GoDaddy A @ (185.199.108-111.153) + CNAME www -> mirahimi500-ai.github.io (never delete MX/TXT) -> Enforce HTTPS -> GitHub verified domain (TXT) -> DMARC (TXT) -> Google Search Console.
+- 2026-11-06: LIVE. GoDaddy DNS: 4x A @ 185.199.108-111.153, CNAME www -> mirahimi500-ai.github.io (MX/TXT untouched). GitHub Pages: main /(root), custom domain www.zaibatech.com, DNS check OK, http+https 200, Enforce HTTPS on.
+- Next (optional): live contact-form test, GitHub verified domain (TXT), DMARC (TXT), Google Search Console + sitemap, privacy@ email on Privacy Policy (A/B/C pending).
